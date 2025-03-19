@@ -1,0 +1,14 @@
+# mcp_agent.config.yaml for DBT Model Reviewer
+$schema: ../../schema/mcp-agent.config.schema.json
+
+execution_engine: asyncio
+logger:
+  type: console
+  level: debug
+  path: "./dbt_model_reviewer.jsonl"
+  batch_size: 100
+  flush_interval: 2
+  max_queue_size: 2048
+
+openai:
+  default_model: "gpt-4o"
