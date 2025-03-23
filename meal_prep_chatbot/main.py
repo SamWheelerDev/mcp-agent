@@ -4,7 +4,7 @@ import asyncio
 from mcp_agent.app import MCPApp
 from mcp_agent.agents.agent import Agent
 from mcp_agent.workflows.llm.augmented_llm import RequestParams
-from mcp_agent.workflows.llm.augmented_llm_openai import OpenAIAugmentedLLM
+from mcp_agent.workflows.llm.augmented_llm_anthropic import AnthropicAugmentedLLM
 
 
 def format_list_tools_result(list_tools_result: ListToolsResult):
@@ -35,7 +35,7 @@ async def main():
         server_names=["fetch", "filesystem"],  # Add recipe_db when available
     )
     await meal_prep_agent.initialize()
-    llm = await meal_prep_agent.attach_llm(OpenAIAugmentedLLM)
+    llm = await meal_prep_agent.attach_llm(AnthropicAugmentedLLM)
 
     tools = await meal_prep_agent.list_tools()
     tools_str = format_list_tools_result(tools)
