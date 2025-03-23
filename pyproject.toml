@@ -71,4 +71,4 @@ include = ["mcp-agent"]
 mcp-agent = ["data/*.json"]
 
 [tool.uv.workspace]
-members = ["examples/streamlit_mcp_basic_agent"]
+members = ["examples/streamlit_mcp_basic_agent", "meal-prep-website"]
