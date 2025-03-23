@@ -21,6 +21,7 @@ import {
   Chat as ChatIcon,
   Restaurant as RecipeIcon,
   CalendarMonth as CalendarIcon,
+  PersonAdd as OnboardingIcon,
 } from '@mui/icons-material';
 
 const Navbar = ({ user }) => {
@@ -34,6 +35,7 @@ const Navbar = ({ user }) => {
     { text: 'Chat', path: '/chat', icon: <ChatIcon /> },
     { text: 'Recipes', path: '/recipes', icon: <RecipeIcon /> },
     { text: 'Calendar', path: '/calendar', icon: <CalendarIcon /> },
+    { text: 'Onboarding', path: '/onboarding', icon: <OnboardingIcon /> },
   ];
 
   const toggleDrawer = (open) => (event) => {

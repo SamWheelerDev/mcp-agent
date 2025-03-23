@@ -13,6 +13,7 @@ import Chat from './pages/Chat';
 import Recipes from './pages/Recipes';
 import RecipeDetail from './pages/RecipeDetail';
 import Calendar from './pages/Calendar';
+import Onboarding from './pages/Onboarding';
 import NotFound from './pages/NotFound';
 
 // Create theme
@@ -81,6 +82,8 @@ function App() {
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipes/:id" element={<RecipeDetail />} />
             <Route path="/calendar" element={<Calendar user={user} />} />
+            <Route path="/onboarding" element={<Onboarding />} />
+            <Route path="/onboarding/:userId" element={<Onboarding />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
